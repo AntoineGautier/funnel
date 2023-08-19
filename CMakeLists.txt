@@ -60,6 +60,7 @@ elseif(LINUX)
         set(PLATFORM_INSTALL_PREFIX linux32)
     endif()
 elseif(MACOSX)
+    set(CMAKE_OSX_ARCHITECTURES "x86_64;arm64" CACHE STRING "")
     set(PLATFORM_INSTALL_PREFIX darwin64)
 endif()
 
